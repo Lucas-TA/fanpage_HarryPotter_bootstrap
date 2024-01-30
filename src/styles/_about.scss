@@ -1,0 +1,54 @@
+@use './variables';
+
+.about {
+    width: 100%;
+    padding: 2em 0;
+    background-color: #ccc;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+
+        width: 80%;
+        margin: 0 auto;
+        padding: 3em;
+        border-radius: 16px;
+
+        background-color: variables.$header-footer;
+
+        @media (max-width: variables.$desktop) {
+            flex-direction: column;
+        }
+
+        &__image-box {
+            align-self: center;
+            &--img {
+                width: 600px;
+                border-radius: 8px;
+
+                @media (max-width: variables.$tablet) {
+                    width: 400px;
+                }
+                @media (max-width: variables.$mobile) {
+                    width: 350px;
+                }
+            }
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            &--paragraph {
+                color: #c9c8c8;
+                text-align: justify;
+                font-size: .9em;
+            }
+        }
+    }
+}

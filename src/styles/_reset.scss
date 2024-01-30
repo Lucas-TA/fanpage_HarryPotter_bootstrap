@@ -5,9 +5,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-h1, h2 {
+html {
+    scroll-behavior: smooth;
+}
+h1, h2, p {
     font-family: 'Cinzel', serif;
 }
-h1 {
+h1, h2 {
     color: variables.$titles;
 }
