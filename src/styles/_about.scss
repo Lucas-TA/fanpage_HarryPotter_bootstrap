@@ -4,6 +4,10 @@
     width: 100%;
     padding: 2em 0;
     background-color: #ccc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__container {
         display: flex;
@@ -12,7 +16,7 @@
         gap: 1em;
 
         width: 80%;
-        margin: 0 auto;
+        margin: auto;
         padding: 3em;
         border-radius: 16px;
 

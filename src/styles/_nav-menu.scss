@@ -10,18 +10,22 @@
 }
 .dropdown-animation {
     animation: dropdown 0.3s ease-out;
+    border-top: 1px solid #fff;
 }
 
 .header {
     width: 100%;
     background-color: variables.$header-footer;
-    position: sticky;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.548);
 
     .nav-menu {
         margin: 0 5%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     
         &__brand {
             color: variables.$titles;
@@ -63,9 +67,9 @@
             @media (max-width: variables.$tablet) {
                 position: absolute;
                 flex-direction: column;
-                border-top: 1px solid #fff;
                 width: 100%;
-                height: auto;
+                height: 300px;
+                top: 0;
                 right: 0;
                 top: 100%;
                 overflow: hidden;
