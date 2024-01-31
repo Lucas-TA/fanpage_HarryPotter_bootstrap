@@ -4,10 +4,15 @@
     width: 100%;
     padding: 2em 0;
     background-color: #ccc;
+    box-shadow: inset -1px -6px 20px 1px #00000066;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: variables.$tablet) {
+        min-height: 60vh;
+    }
 
     &__container {
         display: flex;
@@ -25,12 +30,16 @@
         @media (max-width: variables.$desktop) {
             flex-direction: column;
         }
+        @media (max-width: variables.$tablet) {
+            width: 100%;
+        }
 
         &__image-box {
             align-self: center;
             &--img {
                 width: 600px;
                 border-radius: 8px;
+                box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.548);
 
                 @media (max-width: variables.$tablet) {
                     width: 400px;
@@ -52,6 +61,9 @@
                 color: #c9c8c8;
                 text-align: justify;
                 font-size: .9em;
+            }
+            @media (max-width: variables.$mobile) {
+                width: 110%;
             }
         }
     }

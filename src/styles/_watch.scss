@@ -1,0 +1,67 @@
+@use './variables';
+
+.watch {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    box-shadow: inset -1px -6px 20px 1px #00000066;
+
+    &--section-title {
+        width: 100%;
+        // margin-top: 1em;
+        text-align: center;
+        letter-spacing: 15px;
+        text-transform: uppercase;
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.623);
+        padding: 1em;
+        background-color: variables.$header-footer;
+
+        @media (max-width: variables.$tablet) {
+            letter-spacing: 5px;
+            font-size: 1.4em;
+        }
+    }
+
+    &__container {
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+
+        &__list {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+            border-radius: 8px;
+            background-color: variables.$header-footer;
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &--img {
+                    width: 120px;
+                    height: 90px;
+                    border-radius: 8px;
+                }
+                &--link {
+                    padding: .5em;
+                    text-decoration: none;
+                    font-size: .9em;
+                    background-color: variables.$titles;
+                    margin-top: .5em;
+                    border-radius: 8px;
+                    color: #272727;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
